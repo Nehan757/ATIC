@@ -48,7 +48,7 @@ def split_docs(documents, chunk_size=1000, chunk_overlap=20):
 def load_embedding_model(model_path, normalize_embedding=True):
     return HuggingFaceEmbeddings(
         model_name=model_path,
-        model_kwargs={'device':'cuda'},
+        model_kwargs={'device':'cpu'},
         encode_kwargs = {
             'normalize_embeddings': normalize_embedding
         }
