@@ -7,12 +7,13 @@ Original file is located at
     https://colab.research.google.com/github/Nehan757/LangChain_Project/blob/main/Notebook.ipynb
 """
 
-import torch
+import os
 
-# Check if CUDA (GPU support) is available
-is_cuda_available = torch.cuda.is_available()
-print("CUDA (GPU support) is available:", is_cuda_available)
+# Access the secret
+key = os.getenv('openai_key')
 
+# Use the secret in your code
+print("My secret is:", key)
 
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.document_loaders import PyMuPDFLoader
@@ -104,7 +105,7 @@ class OpenAIWrapper(Runnable):
 import os
 from langchain.llms import OpenAI
 
-os.environ["OPENAI_API_KEY"] = "Paste Your API Key Here"
+os.environ["OPENAI_API_KEY"] = "key"
 
 # Loading openai
 llm = OpenAI()
