@@ -4,9 +4,11 @@ from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
 
+print("modules imported")
 # Load the chain components
 import os
-file_path = os.path.join(os.path.dirname(__file__), 'chain_components.pkl')
+script_dir = os.path.dirname(__file__)
+file_path = os.path.join(script_dir, 'chain_components.pkl')
 with open(file_path, 'rb') as f:
     loaded_chain_components = dill.load(f)
 
