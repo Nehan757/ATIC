@@ -3,7 +3,9 @@ import dill
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
+import torch
 
+torch.device('cpu')
 print("modules imported")
 # Load the chain components
 import os
@@ -11,6 +13,8 @@ script_dir = os.path.dirname(__file__)
 file_path = os.path.join(script_dir, 'chain_components.pkl')
 with open(file_path, 'rb') as f:
     loaded_chain_components = dill.load(f)
+
+
 
 # Reconstruct the chain object
 retriever = loaded_chain_components['retriever']

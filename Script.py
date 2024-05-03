@@ -114,7 +114,7 @@ llm = OpenAI()
 embed = load_embedding_model(model_path = "all-MiniLM-L6-v2")
 
 # loading and splitting the documents
-docs = load_pdf_data(file_path=r"C:\Users\nehan\Desktop\Nlp\COI.pdf")
+docs = load_pdf_data(file_path=r"COI.pdf")
 documents = split_docs(documents=docs)
 
 # creating vectorstore
