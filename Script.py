@@ -159,4 +159,4 @@ prompt2 = loaded_chain_components['prompt']
 chain2 = load_qa_chain(retriever, llm, prompt)
 
 # Use the chain
-get_response("What if i have done a murder", chain2)
+get_response("What is my write of Self-Defence", chain2)
