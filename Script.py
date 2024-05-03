@@ -24,8 +24,10 @@ import textwrap
 import socket
 import ssl
 import dill
+import torch
 
 
+torch.device('cpu')
 class Runnable:
     def run(self, *args, **kwargs):
         raise NotImplementedError("Subclass must implement abstract method")
