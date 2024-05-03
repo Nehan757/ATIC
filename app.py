@@ -4,6 +4,7 @@ from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
 
+# Load the chain components
 import os
 file_path = os.path.join(os.path.dirname(__file__), 'chain_components.pkl')
 with open(file_path, 'rb') as f:
