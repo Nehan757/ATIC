@@ -5,7 +5,9 @@ from langchain.llms import OpenAI
 from langchain import PromptTemplate
 
 # Load the chain components
-with open('chain_components.pkl', 'rb') as f:
+import os
+file_path = os.path.join(os.path.dirname(__file__), 'chain_components.pkl')
+with open(file_path, 'rb') as f:
     loaded_chain_components = dill.load(f)
 
 # Reconstruct the chain object
